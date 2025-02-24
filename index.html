@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color picker</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 1rem);
+        }
+
+        .card {
+            border: 1px solid black;
+            padding: 0.5rem 4rem 2rem;
+            background-color: white;
+            text-align: center;
+        }
+
+        .card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.8rem;
+        }
+
+        #colorPicker {
+            border-radius: 0;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="card">
+                <h1>Color Picker</h1>
+                <div class="card-body">
+                    <label for="color" id="colorLabel">#ffffff</label>
+                    <input type="color" id="colorPicker" name="color" value="#ffffff">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const colorPicker = document.getElementById('colorPicker');
+            const colorLabel = document.getElementById('colorLabel');
+            const container = document.querySelector('.container');
+
+            const savedColor = localStorage.getItem('color') || '#ffffff';
+            colorPicker.value = savedColor;
+            container.style.backgroundColor = savedColor;
+            colorLabel.textContent = savedColor;
+
+            colorPicker.addEventListener('input', (e) => {
+                const newColor = e.target.value;
+                localStorage.setItem('color', newColor);
+                container.style.backgroundColor = newColor;
+                colorLabel.textContent = newColor;
+            });
+        });
+    </script>
+</body>
+
+</html>
