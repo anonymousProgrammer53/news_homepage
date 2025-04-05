@@ -21,7 +21,7 @@
 /* extract font family */
 @font-face {
     font-family: 'Inter';
-    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+    src: url('./Inter-VariableFont_slnt\,wght.ttf');
 }
 
 /* START CSS SETINGS */
