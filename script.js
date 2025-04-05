@@ -4,9 +4,9 @@ getIconMenu.addEventListener('click', () => {
         .querySelector('div').querySelector('nav').querySelector('ul');
     if (getNavList.classList.contains('d-none-768')) {
         getNavList.classList.replace('d-none-768', 'd-flex-768');
-        console.log(getIconMenu.src = './public/assets/images/icon-menu-close.svg');
+        console.log(getIconMenu.src = './icon-menu-close.svg');
     } else if (getNavList.classList.contains('d-flex-768')) {
         getNavList.classList.replace('d-flex-768', 'd-none-768');
-        console.log(getIconMenu.src = './public/assets/images/icon-menu.svg');
+        console.log(getIconMenu.src = './icon-menu.svg');
     }
 });
