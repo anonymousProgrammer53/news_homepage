@@ -2,73 +2,180 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>color picker</title>
-    <style>
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: calc(100vh - 1rem);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays the site correctly based on the user's device -->
 
-        .card {
-            border: 1px solid black;
-            padding: 0.5rem 4rem 2rem;
-            background-color: white;
-            text-align: center;
-        }
+  <!-- website title -->
+  <title>News homepage</title>
 
-        .card-body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            font-size: 1.8rem;
-        }
+  <!-- my own css -->
+  <link rel="stylesheet" href="./public/src/style.css">
 
-        #colorPicker {
-            border-radius: 0;
-            border: 1px solid black;
-            cursor: pointer;
-            background-color: white;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="app">
-        <div class="container">
-            <div class="card">
-                <h1>Color Picker</h1>
-                <div class="card-body">
-                    <label for="color" id="colorLabel">#ffffff</label>
-                    <input type="color" id="colorPicker" name="color" value="#ffffff">
-                </div>
-            </div>
-        </div>
+  <!-- START HEADER -->
+  <header>
+    <div
+      class="m-inline-auto p-block-2rem p-inline-2rem mw-1056px w-100-768 relative-768 d-flex align-items-center justify-content-space-between">
+      <section>
+        <img src="./public/assets/images/logo.svg" alt="logo">
+      </section>
+      <nav>
+        <ul
+          class="p-2rem-768 text-center bg-very-dark-blue-768 w-100-768 absolute-768 inset-block-start-9rem-768 inset-inline-0-768 z-index-10-768 d-flex d-none-768 flex-direction-col-768 align-items-center col-g-2rem">
+          <li class="w-100-768">
+            <a
+              class="text-very-dark-blue bg-off-white m-block-1rem p-block-1-2rem p-inline-3rem border-2px-solid-transparent border-radius-0-5rem d-block-768 transition-0-3s cursor-pointer cursor-default-768 hover-text-off-white hover-bg-dark-orange hover-border-2px-solid-orange hover-box-shadow-4 hover-text-decoration-none active-bg-orange-red active-box-shadow-0 active-border-2px-solid-orange-red active-transform-translateY-2px">
+              Home</a>
+          </li>
+          <li class="w-100-768">
+            <a
+              class="text-very-dark-blue bg-off-white m-block-1rem p-block-1-2rem p-inline-3rem border-2px-solid-transparent border-radius-0-5rem d-block-768 transition-0-3s cursor-pointer cursor-default-768 hover-text-off-white hover-bg-dark-orange hover-border-2px-solid-orange hover-box-shadow-4 hover-text-decoration-none active-bg-orange-red active-box-shadow-0 active-border-2px-solid-orange-red active-transform-translateY-2px">
+              New</a>
+          </li>
+          <li class="w-100-768">
+            <a
+              class="text-very-dark-blue bg-off-white m-block-1rem p-block-1-2rem p-inline-3rem border-2px-solid-transparent border-radius-0-5rem d-block-768 transition-0-3s cursor-pointer cursor-default-768 hover-text-off-white hover-bg-dark-orange hover-border-2px-solid-orange hover-box-shadow-4 hover-text-decoration-none active-bg-orange-red active-box-shadow-0 active-border-2px-solid-orange-red active-transform-translateY-2px">
+              Popular</a>
+          </li>
+          <li class="w-100-768">
+            <a
+              class="text-very-dark-blue bg-off-white m-block-1rem p-block-1-2rem p-inline-3rem border-2px-solid-transparent border-radius-0-5rem d-block-768 transition-0-3s cursor-pointer cursor-default-768 hover-text-off-white hover-bg-dark-orange hover-border-2px-solid-orange hover-box-shadow-4 hover-text-decoration-none active-bg-orange-red active-box-shadow-0 active-border-2px-solid-orange-red active-transform-translateY-2px">
+              Trending</a>
+          </li>
+          <li class="w-100-768">
+            <a
+              class="text-very-dark-blue bg-off-white m-block-1rem p-block-1-2rem p-inline-3rem border-2px-solid-transparent border-radius-0-5rem d-block-768 transition-0-3s cursor-pointer cursor-default-768 hover-text-off-white hover-bg-dark-orange hover-border-2px-solid-orange hover-box-shadow-4 hover-text-decoration-none active-bg-orange-red active-box-shadow-0 active-border-2px-solid-orange-red active-transform-translateY-2px">
+              Categories</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="d-none d-block-768">
+        <img src="./public/assets/images/icon-menu.svg" alt="icon-menu">
+      </section>
     </div>
+  </header>
+  <!-- END HEADER -->
 
-    <script>
-        window.addEventListener('load', () => {
-            const colorPicker = document.getElementById('colorPicker');
-            const colorLabel = document.getElementById('colorLabel');
-            const container = document.querySelector('.container');
+  <!-- START MAIN -->
+  <main>
+    <!-- START ARTICLE 1 -->
+    <article>
+      <div
+        class="m-inline-auto p-block-end-4rem p-inline-2rem mw-1056px w-100-768 relative-768 d-flex flex-direction-col-768 justify-content-space-between col-g-2rem row-g-2rem-768">
+        <!-- start section -->
+        <section class="w-70 w-100-768">
+          <picture>
+            <source srcset="./public/assets/images/image-web-3-mobile.jpg" media="(max-width: 768px)">
+            <img src="./public/assets/images/image-web-3-desktop.jpg" alt="image-web-3">
+          </picture>
+          <div class="m-block-1rem d-flex flex-direction-col-768 align-items-start col-g-2rem">
+            <h1 class="fs-3-6rem m-block-1rem w-50 w-100-768">Masa Depan Cerah Web 3.0?</h1>
+            <div class="w-70 w-100-768">
+              <p class="m-block-1rem">Kami menyelami evolusi web berikutnya yang mengklaim mengembalikan kekuatan
+                platform ke tangan masyarakat. Namun apakah janjinya benar-benar terealisasi?</p>
+              <button
+                class="fs-1-8rem text-off-white bg-orange m-block-1rem p-block-1-2rem p-inline-3rem border-2px-solid-transparent border-radius-0-5rem d-block-768 transition-0-3s cursor-pointer cursor-default-768 hover-text-off-white hover-bg-dark-orange hover-border-2px-solid-orange hover-box-shadow-4 active-bg-orange-red active-box-shadow-0 active-border-2px-solid-orange-red active-transform-translateY-2px">
+                SELENGKAPNYA</button>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
 
-            const savedColor = localStorage.getItem('color') || '#ffffff';
-            colorPicker.value = savedColor;
-            container.style.backgroundColor = savedColor;
-            colorLabel.textContent = savedColor;
+        <!-- start asside -->
+        <aside class="p-2rem bg-very-dark-blue w-30 w-100-768 h-75vh overflow-auto">
+          <h1 class="fs-3-6rem m-block-1rem text-off-white">BARU</h1>
+          <article class="p-block-1-2rem">
+            <img src="./public/assets/images/mobil-hydrogen.jpg" alt="mobil hidrogen vs listrik">
+            <h2 class="fs-1-8rem m-block-1rem">
+              <a href="#" class="cursor-pointer cursor-default-768">Mobil Hidrogen VS Listrik</a>
+            </h2>
+            <p class="m-block-1rem text-grayish-blue">Akankah mobil berbahan bakar hidrogen bisa menyamai kendaraan
+              listrik?</p>
+          </article>
+          <article class="p-block-1-2rem">
+            <img src="./public/assets/images/road-trip-nights-2.jpg" alt="seni ai">
+            <h2 class="fs-1-8rem m-block-1rem">
+              <a href="#" class="cursor-pointer cursor-default-768">Kelemahan Seni AI</a>
+            </h2>
+            <p class="m-block-1rem text-grayish-blue">Apa saja dampak buruk yang mungkin timbul dari citra AI on-demand
+              generasi?</p>
+          </article>
+          <article class="p-block-1-2rem">
+            <img src="./public/assets/images/venture-capital.webp" alt="ventura capital">
+            <h2 class="fs-1-8rem m-block-1rem">
+              <a href="#" class="cursor-pointer cursor-default-768">Apakah Pendanaan VC Mengering?</a>
+            </h2>
+            <p class="m-block-1rem text-grayish-blue">
+              Pendanaan swasta oleh perusahaan modal ventura turun 50% YoY. Kita lihat apa maksudnya.
+            </p>
+          </article>
+        </aside>
+        <!-- end asside -->
+      </div>
+    </article>
+    <!-- END ARTICLE 1 -->
 
-            colorPicker.addEventListener('input', (e) => {
-                const newColor = e.target.value;
-                localStorage.setItem('color', newColor);
-                container.style.backgroundColor = newColor;
-                colorLabel.textContent = newColor;
-            });
-        });
-    </script>
+    <!-- START ARTICLE 2 -->
+    <article>
+      <div
+        class="m-inline-auto p-block-4rem p-inline-2rem mw-1056px w-100-768 relative-768 d-flex flex-direction-col-768 justify-content-space-between col-g-2rem row-g-2rem-768">
+        <section class="w-100 d-flex align-items-start col-g-2rem">
+          <img src="./public/assets/images/image-retro-pcs.jpg" class="w-50 w-30-768">
+          <div>
+            <h1 class="fs-3-6rem">01</h1>
+            <h2 class="fs-1-8rem">
+              <a href="#" class="cursor-pointer cursor-default-768">Menghidupkan Kembali PC Retro</a>
+            </h2>
+            <p class="m-block-1rem">Apa yang terjadi jika PC lama diberi upgrade modern?</p>
+          </div>
+        </section>
+        <section class="w-100 d-flex align-items-start col-g-2rem">
+          <img src="./public/assets/images/image-top-laptops.jpg" class="w-50 w-30-768">
+          <div>
+            <h1 class="fs-3-6rem">02</h1>
+            <h2 class="fs-1-8rem">
+              <a href="#" class="cursor-pointer cursor-default-768">
+                10 Laptop Teratas tahun 2022</a>
+            </h2>
+            <p class="m-block-1rem">Pilihan terbaik kami untuk berbagai kebutuhan dan anggaran.</p>
+          </div>
+        </section>
+        <section class="w-100 d-flex align-items-start col-g-2rem">
+          <img src="./public/assets/images/image-gaming-growth.jpg" class="w-50 w-30-768">
+          <div>
+            <h1 class="fs-3-6rem">03</h1>
+            <h2 class="fs-1-8rem">
+              <a href="#" class="cursor-pointer cursor-default-768">
+                Pertumbuhan Game</a>
+            </h2>
+            <p class="m-block-1rem">Bagaimana pandemi ini telah membuka peluang baru.</p>
+          </div>
+        </section>
+      </div>
+    </article>
+    <!-- END ARTICLE 2 -->
+  </main>
+  <!-- END MAIN -->
+
+  <!-- START FOOTER -->
+  <footer class="bg-very-dark-blue">
+    <div class="text-center m-block-start-4rem m-inline-auto p-block-2rem p-inline-2rem mw-1056px w-100-768">
+      <p class="m-block-1rem text-grayish-blue">Submission: Tugas Akhir Membuat Website oleh
+        <a href="https://www.dicoding.com/" target="_blank" class="cursor-pointer cursor-default-768">Dicoding
+          Indonesia</a>.
+        Dikodekan oleh <a href="" class="cursor-pointer cursor-default-768">Ilham
+          Pahrurroji</a>.
+      </p>
+      <p class="m-block-1rem text-grayish-blue">di bikin dengan penuh cinta dan kasih sayang</p>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- my own js  -->
+  <script src="./public/src/script.js"></script>
 </body>
 
 </html>
